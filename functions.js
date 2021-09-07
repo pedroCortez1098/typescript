@@ -26,3 +26,22 @@ function imprimirEnConsola(s) {
     console.log(s);
 }
 saludar4(imprimirEnConsola);
+var Caballo = /** @class */ (function () {
+    function Caballo(nombre) {
+        this.nombre = nombre;
+    }
+    return Caballo;
+}());
+var automovil = /** @class */ (function () {
+    function automovil(nombre) {
+        this.nombre = nombre;
+    }
+    return automovil;
+}());
+function construirTransporte(ctr, nombre) {
+    return new ctr(nombre);
+}
+var miCaballo = construirTransporte(Caballo, "Paso Fino");
+var miAutomovil = construirTransporte(automovil, "Toyota");
+console.log("Mi caballo se llama " + miCaballo.nombre);
+console.log("Mi Automvil es un " + miAutomovil.nombre);

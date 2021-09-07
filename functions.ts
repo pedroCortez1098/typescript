@@ -30,3 +30,28 @@ function imprimirEnConsola(s: string){
     console.log(s);
 }
 saludar4(imprimirEnConsola);
+
+interface transporte{
+    nombre: string;
+}
+
+class Caballo implements transporte{
+    constructor(public nombre: string) {    }
+}
+
+class automovil implements transporte{
+    constructor(public nombre: string) {    }
+}
+
+type ConstructorDeTransporte = {
+    new (nombre: string): transporte;
+};
+
+function construirTransporte(ctr: ConstructorDeTransporte, nombre:string){
+    return new ctr(nombre);
+}
+
+const miCaballo = construirTransporte(Caballo, "Paso Fino");
+const miAutomovil = construirTransporte(automovil, "Toyota");
+console.log("Mi caballo se llama " + miCaballo.nombre);
+console.log("Mi Automvil es un " + miAutomovil.nombre);
