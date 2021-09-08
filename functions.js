@@ -45,3 +45,9 @@ var miCaballo = construirTransporte(Caballo, "Paso Fino");
 var miAutomovil = construirTransporte(automovil, "Toyota");
 console.log("Mi caballo se llama " + miCaballo.nombre);
 console.log("Mi Automvil es un " + miAutomovil.nombre);
+function sumar(_a) {
+    var a = _a.a, b = _a.b, c = _a.c;
+    return a + b + c;
+}
+var numeros = { a: 1, b: 2, c: 3 };
+console.log(sumar(numeros));

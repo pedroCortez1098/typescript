@@ -55,3 +55,14 @@ const miCaballo = construirTransporte(Caballo, "Paso Fino");
 const miAutomovil = construirTransporte(automovil, "Toyota");
 console.log("Mi caballo se llama " + miCaballo.nombre);
 console.log("Mi Automvil es un " + miAutomovil.nombre);
+
+function sumar({a,b,c}: { a: number; b:number; c:number }):number{
+    return a + b + c;
+}
+const numeros = {a:1, b:2, c:3};
+console.log(sumar(numeros));
+
+function saludar2(persona: {nombre: string; edad: number}){
+    return `Hola $persona.nombre`;
+}
+
