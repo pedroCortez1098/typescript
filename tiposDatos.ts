@@ -174,3 +174,9 @@ function imprimir(estadoCivil: 'Soltero' | 'Casado'){
     console.log(estadoCivil);
 }
 imprimir('Soltero');
+
+
+function opcional(id = 10){
+    console.log(`El id es ${id}`);
+}
+console.log(opcional());

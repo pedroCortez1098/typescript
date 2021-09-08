@@ -116,3 +116,8 @@ function imprimir(estadoCivil) {
     console.log(estadoCivil);
 }
 imprimir('Soltero');
+function opcional(id) {
+    if (id === void 0) { id = 10; }
+    console.log("El id es " + id);
+}
+console.log(opcional());
