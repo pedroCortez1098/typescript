@@ -120,4 +120,14 @@ function opcional(id) {
     if (id === void 0) { id = 10; }
     console.log("El id es " + id);
 }
-console.log(opcional());
+opcional();
+var Luis = { edad: 20 };
+var Pedro = Luis;
+Luis.edad++;
+Luis.edad++;
+Luis.edad++;
+Luis.edad--;
+Luis.edad = Pedro.edad;
+//Pedro.edad++;
+console.log(Luis.edad);
+console.log(Pedro.edad);

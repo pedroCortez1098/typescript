@@ -18,7 +18,7 @@ nombres.forEach(function (s) {
 nombres.forEach(function (s) {
     console.log(s.toUpperCase());
 });
-// Funciones como Expresiones
+// Funciones como Expresiones.
 function saludar4(fn) {
     fn("Hola Mundo");
 }
@@ -51,3 +51,7 @@ function sumar(_a) {
 }
 var numeros = { a: 1, b: 2, c: 3 };
 console.log(sumar(numeros));
+function saludar2(persona) {
+    return "Hola $persona.nombre";
+}
+console.log("hola");

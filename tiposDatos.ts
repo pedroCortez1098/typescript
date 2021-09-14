@@ -179,4 +179,23 @@ imprimir('Soltero');
 function opcional(id = 10){
     console.log(`El id es ${id}`);
 }
-console.log(opcional());
+opcional();
+
+
+interface Persona{
+    edad: number;
+}
+interface EdadNoEscribible{
+    readonly edad:number;
+}
+const Luis: Persona = { edad: 20 };
+const Pedro :EdadNoEscribible = Luis;
+
+Luis.edad++;
+Luis.edad++;
+Luis.edad++;
+Luis.edad--;
+Luis.edad = Pedro.edad;
+//Pedro.edad++;
+console.log(Luis.edad);
+console.log(Pedro.edad);

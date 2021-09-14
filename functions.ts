@@ -22,7 +22,7 @@ nombres.forEach((s) =>{
     console.log(s.toUpperCase());
 });
 
-// Funciones como Expresiones
+// Funciones como Expresiones.
 function saludar4(fn: (a: string) => void){
     fn("Hola Mundo");
 }
@@ -66,3 +66,4 @@ function saludar2(persona: {nombre: string; edad: number}){
     return `Hola $persona.nombre`;
 }
 
+console.log("hola");
