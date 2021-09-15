@@ -26,3 +26,61 @@ class Perro extends Animal{
 const miPerro = new Perro();
 miPerro.ladrar();
 miPerro.moverse();
+
+class Padre{
+    saludar(){
+        console.log("Hola");
+    }
+}
+
+class Hijo extends Padre{
+    saludar(nombre?: string) {
+        if(!!nombre){
+            console.log(`Hola, ${nombre}`);
+        }
+        else {
+            super.saludar();
+        }
+    }
+}
+
+const hijo = new Hijo();
+hijo.saludar();
+hijo.saludar("Pedro");
+
+const h: Padre = new Hijo();
+
+class Definicion{
+    nombre = "definicion";
+    constructor() {
+        console.log(`Mi nombre es ${this.nombre}`);
+    }
+}
+
+class Implementacion extends Definicion {}
+const d = new Implementacion();
+
+class Saludo{
+    protected getDestinatario(){
+        return "amigos";
+    }
+}
+
+class SaludoEspecial extends Saludo{
+    saludar(){
+        console.log(`Hola, ${this.getDestinatario()}`);
+    }
+}
+
+const inst = new SaludoEspecial();
+inst.saludar();
+
+class MiClase{
+    static x = 10;
+    static imprimirX(){
+        console.log(`El valor de X es: ${this.x}`);
+    }
+}
+
+MiClase.imprimirX();
+

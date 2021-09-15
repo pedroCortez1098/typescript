@@ -44,3 +44,65 @@ var Perro = /** @class */ (function (_super) {
 var miPerro = new Perro();
 miPerro.ladrar();
 miPerro.moverse();
+var Padre = /** @class */ (function () {
+    function Padre() {
+    }
+    Padre.prototype.saludar = function () {
+        console.log("Hola");
+    };
+    return Padre;
+}());
+var Hijo = /** @class */ (function (_super) {
+    __extends(Hijo, _super);
+    function Hijo() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Hijo.prototype.saludar = function (nombre) {
+        if (!!nombre) {
+            console.log("Hola, " + nombre);
+        }
+        else {
+            _super.prototype.saludar.call(this);
+        }
+    };
+    return Hijo;
+}(Padre));
+var hijo = new Hijo();
+hijo.saludar();
+hijo.saludar("Pedro");
+var h = new Hijo();
+var Definicion = /** @class */ (function () {
+    function Definicion() {
+        this.nombre = "definicion";
+        console.log("Mi nombre es " + this.nombre);
+    }
+    return Definicion;
+}());
+var Implementacion = /** @class */ (function (_super) {
+    __extends(Implementacion, _super);
+    function Implementacion() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return Implementacion;
+}(Definicion));
+var d = new Implementacion();
+var Saludo = /** @class */ (function () {
+    function Saludo() {
+    }
+    Saludo.prototype.getDestinatario = function () {
+        return "amigos";
+    };
+    return Saludo;
+}());
+var SaludoEspecial = /** @class */ (function (_super) {
+    __extends(SaludoEspecial, _super);
+    function SaludoEspecial() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    SaludoEspecial.prototype.saludar = function () {
+        console.log("Hola, " + this.getDestinatario());
+    };
+    return SaludoEspecial;
+}(Saludo));
+var inst = new SaludoEspecial();
+inst.saludar();
