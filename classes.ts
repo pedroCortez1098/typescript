@@ -76,11 +76,35 @@ const inst = new SaludoEspecial();
 inst.saludar();
 
 class MiClase{
-    static x = 10;
+    private static x = 10;
     static imprimirX(){
         console.log(`El valor de X es: ${this.x}`);
     }
 }
 
 MiClase.imprimirX();
+
+class Base2{
+    static saludar(){
+        console.log("Hola Mundo");
+    }
+}
+
+class Derivada2 extends Base2{}
+
+Derivada2.saludar();
+Base2.saludar();
+
+class Caja{
+    contenido = "";
+    set(valor: string){
+        this.contenido = valor;
+        return this;
+    }
+}
+
+const miCaja: Caja = new Caja();
+const valorRetornado = miCaja.set("Joyas");
+console.log(miCaja);
+console.log(valorRetornado);
 

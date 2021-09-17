@@ -106,3 +106,44 @@ var SaludoEspecial = /** @class */ (function (_super) {
 }(Saludo));
 var inst = new SaludoEspecial();
 inst.saludar();
+var MiClase = /** @class */ (function () {
+    function MiClase() {
+    }
+    MiClase.imprimirX = function () {
+        console.log("El valor de X es: " + this.x);
+    };
+    MiClase.x = 10;
+    return MiClase;
+}());
+MiClase.imprimirX();
+var Base2 = /** @class */ (function () {
+    function Base2() {
+    }
+    Base2.saludar = function () {
+        console.log("Hola Mundo");
+    };
+    return Base2;
+}());
+var Derivada2 = /** @class */ (function (_super) {
+    __extends(Derivada2, _super);
+    function Derivada2() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return Derivada2;
+}(Base2));
+Derivada2.saludar();
+Base2.saludar();
+var Caja = /** @class */ (function () {
+    function Caja() {
+        this.contenido = "";
+    }
+    Caja.prototype.set = function (valor) {
+        this.contenido = valor;
+        return this;
+    };
+    return Caja;
+}());
+var miCaja = new Caja();
+var valorRetornado = miCaja.set("Joyas");
+console.log(miCaja);
+console.log(valorRetornado);
